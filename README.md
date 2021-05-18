@@ -9,12 +9,12 @@ Node JS >= 12
 Java >= 8 (for Selenium Standalone server)
 
 # How to execute
-1.Clone this repo,
+1. Clone this repo.
 2. Navigate to root folder.
 3. Execute 'npm install'. It will install all dependencies and a node_modules folder would be created in the root directoty.
-4. Execute 'npm run test' command in terminal window
+4. Execute 'npm run test' command in terminal window.
 5. You will find a folder named "allure-results" with Allure report files generated.
-6. Generate Allure html report and open the report application. (execute command: 'npm run report'). The report application will open automatically in  a new browser window.
+7. Generate Allure html report and open the report application. (execute command: 'npm run report'). The report application will open automatically in  a new browser window.
 
 # Areas to be improved
 Due to time constraint, all features are not implemented, To improve the framework we may need to consider below factors
