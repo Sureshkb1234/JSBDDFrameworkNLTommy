@@ -1,14 +1,19 @@
 
 const { Given, When, Then } = require('cucumber');
 
-
 When(/^user logged in to the application with credentials as \"([^\"]*)\" and \"([^\"]*)\"$/,  (emailID,password) =>  {
-    $('//button[@data-testid="sign-in-button"]').click();
-    $('//input[@name="signin-email"]').setValue(emailID);
-    $('//input[@name="signin-password"]').setValue(password);
-    $('//button[@data-testid="Button-primary-new"]').click();
-    browser.pause(1000)
-    expect($('//input[@name="signin-password"]')).not.toBeExisting();
+
+    let isLoggedIn = $('//input[@name="signin-password"]').isExisting();
+
+    if (isLoggedIn ==  true) //alreadhy logged in
+    {
+        $('//button[@data-testid="sign-in-button"]').click();
+        $('//input[@name="signin-email"]').setValue(emailID);
+        $('//input[@name="signin-password"]').setValue(password);
+        $('//button[@data-testid="Button-primary-new"]').click();
+        browser.pause(1000)
+        expect($('//input[@name="signin-password"]')).not.toBeExisting();
+    }
 
 
 });
@@ -45,20 +50,19 @@ When(/^user adds a new address with street as (.+)$/,  (street) => {
     $('//input[@name="address1"]').setValue(street);
    
 });
-  
+
 When(/^user house number as (.+)$/, (housenumber) => {
 
     //house number and addition
     $('//input[@name="address2"]').setValue(housenumber);
     
 });
-  
+
 When(/^user place as (.+)$/, (place) => {
 
     //place
     $('//input[@name="city"]').setValue(place);
     
-
 });
   
 When(/^user postal code as (.+)$/,  (postalcode) => {
