@@ -5,6 +5,7 @@ A simple Cucumber and JS based test automation framework, developed for a demo p
 
 # Development Environment setup:
 Node JS >= 12
+
 Java >= 8 (for Selenium Standalone server)
 
 # How to execute
@@ -27,4 +28,4 @@ Due to time constraint, all features are not implemented, To improve the framewo
 7. Add more error handling to make the step defintion functions robust.
 8. Handle multi lingual locators whereever reuqred (specifically when verify html text displayed for the element )
 9. Logically study all scenarios and make the test cases independent of each other , Now in this demo, 3rd Test scenario is depending on 2nd scenario. In real time it should not be the case. It will also help to run tests parallelly.
-10.Add config file to add paramters, example username / pasword etc.., you can keep the password in encyrpted format in config file, decrypt it when use in the application
+10. Add config file to add paramters, example username / pasword etc.., you can keep the password in encyrpted format in config file, decrypt it when use in the application
